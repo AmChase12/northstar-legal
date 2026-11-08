@@ -1,6 +1,6 @@
 # Unified legal pages — implementation plan (not live)
 
-Prepared Nov 7, 2026. Live `northstardigi.agency` routes were **not** changed. GitHub Pages `privacy/` and `terms/` were **not** overwritten. Drafts: `drafts/privacy-policy.html` and `drafts/terms-of-service.html`.
+Prepared Nov 7, 2026. Live `northstardigi.agency` routes were **not** changed. GitHub Pages `privacy/` and `terms/` were **not** overwritten. Drafts: `drafts/privacy-policy.html` and `drafts/terms-of-service.html`. Upload layout: `drafts/static-root/`. Routing steps: `docs/STATIC-ROUTING.md`. **Do not guess the public/HELP phone:** both (304) 484-4648 and (304) 381-1611 stay flagged until Chase confirms.
 
 ## Goal
 
