@@ -19,6 +19,8 @@ Titles intended:
 
 Canonical tags already point at the agency URLs.
 
+Attorney handoff list: `docs/LEGAL-REVIEW-ITEMS.md`.
+
 ## Language that needs professional review (do not treat this as legal advice)
 
 1. **Two public phone numbers** — GHL privacy uses (304) 484-4648; GitHub Pages and GHL terms SMS HELP use (304) 381-1611. Drafts list both. Pick one HELP number before filing with a carrier.
