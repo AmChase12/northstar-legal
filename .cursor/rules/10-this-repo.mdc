@@ -5,8 +5,8 @@ alwaysApply: true
 
 # northstar-legal
 
-The only public AmChase12 repository. Two HTML pages: `privacy/` and `terms/`.
+Two static HTML pages: `privacy/` and `terms/`.
 
 - **Production:** GitHub Pages at `https://amchase12.github.io/northstar-legal/`. Canonical links in the HTML point at `www.northstardigi.agency`. Changing paths or visibility can break carrier compliance URLs.
-- No build, no tests, no secrets.
-- Do not fold these pages into `northstar-site` without confirming the registered legal URLs.
+- No build, no tests, no secrets, no application backend.
+- Do not fold these pages into another site without confirming the registered legal URLs.

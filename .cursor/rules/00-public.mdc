@@ -1,0 +1,13 @@
+---
+description: This GitHub repository is public. Commit only Privacy and Terms HTML. Do not add internal maps or other businesses.
+alwaysApply: true
+---
+
+# northstar-legal (public repository)
+
+Anything committed here is visible on the internet, including Cursor rules.
+
+- Edit only Northstar Digital LLC Privacy and Terms HTML used for SMS/A2P compliance.
+- Do not add internal repository names, database identifiers, environment maps, staff tools, or other businesses.
+- Do not change GitHub Pages settings, canonical URLs, or repository visibility without owner approval.
+- Production is GitHub Pages from `main` at `/`. Use a pull request.
