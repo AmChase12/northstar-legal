@@ -1,0 +1,45 @@
+---
+description: AmChase12 multi-repo router. Identify the owning repository before editing. Do not mix businesses or push unfinished work to production branches.
+alwaysApply: true
+---
+
+# AmChase12 workspace
+
+This folder is one independent GitHub repository under AmChase12. Edit only the repository that owns the task. Touch a second repository only when the task names both, or when careers and the command center share `careers_applications` on the same Supabase project.
+
+## Route the work
+
+| Task | Repository |
+|---|---|
+| Northstar OS, Client OS, Inner Circle, HQ, hiring admin, iOS shell | `northstardigitalcommandcenter` |
+| Public careers / applicant portal | `northstar-careers` |
+| Northstar marketing Next.js source | `northstar-site` |
+| Live northstardigi.agency GoHighLevel site | Not auto-deployed from `northstar-site` main. Open PRs #1 and #3 hold `ghl-site/`. Merging main does not publish GHL. |
+| Privacy / Terms (SMS, A2P) | `northstar-legal` (GitHub Pages) |
+| Setter field manual | `setter-manual` |
+| Agency operating notes | `northstar-vault` |
+| Agents operator console | `agents-21b9c6c5` |
+| August 2026 Agents prototype | `Agents` — keep. Do not deploy over the live console. Do not archive unless asked. |
+| Conductor follow-up drafts | `conductor-brain` (writes the Agents Supabase project). The production workflow is currently disabled on GitHub. |
+| LeadFlow / Leadpad dialer | No AmChase12 repository. External Supabase project `xmjlwfprptglrldfxrha`. Do not create `leadflow-pro`. |
+| Echelon Auto Studio site | `echelon` |
+| FlipTrack Garage product | `fliptrackgarage`. The string `fliptrack-garage` is the in-app MCP server name, not a second GitHub repo. Do not create `fliptrack-garage`. |
+| Green Water Aviation | `greenwater` |
+| Personal finance notes | `finance-vault` — never deploy, never mix into a product PR |
+
+## Production surfaces (do not treat a feature branch as live)
+
+- Lovable syncs the connected branch (`main`) for `northstardigitalcommandcenter`, `agents-21b9c6c5`, and `fliptrackgarage`.
+- `conductor-brain` `main` is a scheduled production job **when the workflow is enabled**.
+- `northstar-legal` GitHub Pages builds from this repository.
+- Echelon, careers, setter-manual, and greenwater are Netlify-oriented static/export sites. Still use pull requests.
+- GraphSift 4.14.0 in this environment is **read-only** and currently indexes only `northstar-site`. Do not reconfigure that MCP server. Do not point it at `finance-vault` or `northstar-vault`.
+
+## Requires explicit owner approval
+
+- Merge to `main` on a Lovable, GitHub Pages, or conductor repository
+- Enable, disable, or edit the Conductor Brain workflow
+- Branch protection, DNS, Netlify production, Lovable publish, GoHighLevel publish, or Supabase schema
+- Create, delete, or rename repositories
+- Archive `Agents`
+- Shared-database migrations

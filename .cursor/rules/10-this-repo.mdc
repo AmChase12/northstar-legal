@@ -1,0 +1,12 @@
+---
+description: Public Privacy and Terms HTML for SMS/A2P. GitHub Pages production. Do not change URLs without approval.
+alwaysApply: true
+---
+
+# northstar-legal
+
+The only public AmChase12 repository. Two HTML pages: `privacy/` and `terms/`.
+
+- **Production:** GitHub Pages at `https://amchase12.github.io/northstar-legal/`. Canonical links in the HTML point at `www.northstardigi.agency`. Changing paths or visibility can break carrier compliance URLs.
+- No build, no tests, no secrets.
+- Do not fold these pages into `northstar-site` without confirming the registered legal URLs.
