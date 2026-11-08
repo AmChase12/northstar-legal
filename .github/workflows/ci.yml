@@ -1,0 +1,30 @@
+name: CI
+
+# Pull requests only. Does not publish GitHub Pages or change agency DNS.
+on:
+  pull_request:
+
+jobs:
+  drafts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Drafts keep SMS/A2P clauses and both phone flags
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("drafts/privacy-policy.html").read_text()
+          t = Path("drafts/terms-of-service.html").read_text()
+          p2 = Path("drafts/static-root/privacy-policy/index.html").read_text()
+          t2 = Path("drafts/static-root/terms-of-service/index.html").read_text()
+          for label, s in [("privacy", p), ("terms", t), ("privacy-static", p2), ("terms-static", t2)]:
+              for needle in ["STOP", "HELP", "(304) 484-4648", "(304) 381-1611", "Draft — not published", "noindex"]:
+                  if needle not in s:
+                      raise SystemExit(f"{label} missing {needle}")
+          if "never shared" not in p.lower():
+              raise SystemExit("privacy missing mobile non-sharing clause")
+          if "18" not in t or "18" not in t2:
+              raise SystemExit("terms missing 18+ SMS age line")
+          print("legal drafts ok")
+          PY
