@@ -24,5 +24,7 @@ jobs:
                       raise SystemExit(f"{label} missing {needle}")
           if "never shared" not in p.lower():
               raise SystemExit("privacy missing mobile non-sharing clause")
+          if "18" not in t or "18" not in t2:
+              raise SystemExit("terms missing 18+ SMS age line")
           print("legal drafts ok")
           PY
