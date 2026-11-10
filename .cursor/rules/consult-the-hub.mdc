@@ -1,0 +1,22 @@
+---
+description: Consult Northstar AI Hub before substantial work, then follow this repo's own instructions.
+alwaysApply: true
+---
+
+# Consult the Hub first
+
+This rule does not replace this repository's AGENTS.md or its other Cursor rules. Read those after the Hub check. Do not copy the Hub into this repo.
+
+A simple question that names one file in this repo can be answered from that file. Skip the Hub report.
+
+For a website, automation, sale, design, development task, operation, price, or customer message:
+
+1. If `START-HERE.md` is in this workspace, read it and follow `prompts/00-consult-the-hub.md`.
+2. Otherwise, if `gh` can read `AmChase12/northstar-ai-hub`, read these paths from that repo and do not clone it: `START-HERE.md`, `prompts/00-consult-the-hub.md`, `business/standards.md`, `business/approved-pricing.md` when money is involved, `TOOLS-AND-REPOS.md` when a tool is involved, and one context pack. Use `context-packs/northstar-digital.md` for Northstar Digital, `context-packs/echelon-auto-studio.md` for Echelon, and `context-packs/client-website.md` for another client.
+3. If those files cannot be read, look for `northstar-hub-context/MANIFEST.json` in this repo. When it is present, read `northstar-hub-context/CONTEXT.md` and cite the `hubCommit` in the manifest. That pin is a reading set. It is not the catalog.
+4. If neither the Hub nor that pin can be read, say "Hub not read" and stop any part of the task that would state a price, choose a tool, change an offer, or describe a repository you cannot open. Do not invent a price, a license, a workflow, or a repository tree. A question about a file already in this repo can still be answered from that file.
+5. Approved Reference is research and guidance only. It is not approval to install, to use in production, or a security certification. Verified still needs approval. Pending Review and Rejected are not approved. Do not install, clone, deploy, or integrate a catalog repository unless the task says so.
+6. A private repo this token cannot open is `Not visible to this token`. That does not mean the repo is missing.
+7. Keep the pre-task note to a few lines: project, whether the Hub was read, the pack or pinned commit used, and any access gap. Then do the authorized work.
+
+ChatGPT, Claude, Grok, and Cursor do not automatically share memory, tools, connected accounts, or repository access.
